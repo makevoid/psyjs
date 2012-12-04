@@ -1,0 +1,14 @@
+%form{ action: "/test_ada", method: "post" }
+  %label Gli asini volano? 
+  %input{ name: "answers[0]", value: "1", type: "radio" } Si
+  %input{ name: "answers[0]", value: "0", type: "radio" } No
+
+  %label I soldi crescono sugli alberi?
+  %input{ name: "answers[1]", value: "1", type: "radio" } Si
+  %input{ name: "answers[1]", value: "0", type: "radio" } No
+
+  %label Il gatto e la volpe hanno colpito ancora?
+  %input{ name: "answers[2]", value: "1", type: "radio" } Si
+  %input{ name: "answers[2]", value: "0", type: "radio" } No
+
+  %input{ type: "submit", value: "Completa" }
