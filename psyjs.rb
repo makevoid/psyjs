@@ -17,6 +17,17 @@ class Psyjs < Sinatra::Base
     end
     haml "_#{name}".to_sym, locals: locals
   end
+
+  # tests
+
+  def filter_answers(answers)
+    filtered = {}
+    answers.map do |idx, value|
+      val = value.to_i unless value.blank?
+      filtered[idx.to_i] = val
+    end
+    filtered
+  end
 end
 
 require_all "#{path}/routes"

@@ -1,7 +1,5 @@
 (function() {
 
-  $(function() {
-    return $("body").append("prova");
-  });
+  $(function() {});
 
 }).call(this);

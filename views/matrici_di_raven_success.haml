@@ -1,0 +1,6 @@
+- answers = filter_answers params[:answers] || {}
+- points = Raven.check answers
+
+%p Hai completato il test di raven
+
+%p Il tuo punteggio e' di #{points} / #{Raven.size}

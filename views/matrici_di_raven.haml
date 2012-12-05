@@ -1,1 +1,24 @@
-Matrici di raven
+%h1 Matrici di raven
+
+%form{ action: "/matrici_di_raven", method: "post" }
+  - Raven.tests.each_with_index do |test, test_idx|
+    .test{ class: test_idx }
+      - base_path = "/img/raven/#{test[:number]}"
+
+      %h2 Test: #{test[:number]}
+      .cases
+        - test[:cases].times do |case_num|
+          %img{ src: "#{base_path}/cases/#{case_num}.png"}
+        .empty ?
+
+      .answers
+        - test[:answers].times do |answer|
+          - right = "_v" if test[:right] == answer
+          - id = "answer_#{test[:number]}_#{answer}"
+          %label{ for: id }
+            %img{ src: "#{base_path}/answers/#{answer}#{right}.png" }
+          %input{ id: id, type: "radio", name: "answers[#{test_idx}]", value: answer }
+    
+      %button Avanti
+    
+  %input{ type: "submit", value: "Completa" }

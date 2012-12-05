@@ -2,5 +2,3 @@
 
 
 $ ->
-    
-  $("body").append "prova"

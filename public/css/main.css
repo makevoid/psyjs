@@ -1,5 +1,22 @@
+a {
+  text-decoration: none; }
+
 body {
-  background: red; }
+  font-family: Georgia, Verdana; }
+
+a {
+  color: darkblue; }
+
+a:hover {
+  color: blue; }
+
+nav {
+  font-size: 1.3em;
+  font-weight: bold; }
+  nav a {
+    margin: 0 1% 0 0; }
+  nav a:last-child {
+    margin: 0; }
 
 label, input[type='submit'] {
   margin: 10px 0 0 0;
@@ -7,3 +24,16 @@ label, input[type='submit'] {
 
 input[type='submit'] {
   margin: 10px 0 0 100px; }
+
+.matrici_di_raven .cases img, .matrici_di_raven .cases .empty {
+  float: left; }
+.matrici_di_raven .cases .empty {
+  background: #dddddd;
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  padding: 14px 0 0 0; }
+.matrici_di_raven .answers {
+  clear: left; }
+  .matrici_di_raven .answers input, .matrici_di_raven .answers label {
+    display: inline-block; }

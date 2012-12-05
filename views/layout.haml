@@ -2,7 +2,7 @@
   %head
     %title Psyjs
     %link{ rel: "stylesheet", href: "/css/main.css" }
-  %body
+  %body{ class: body_class }
     #container
       %header
         %h1 Psy
@@ -11,5 +11,6 @@
         %a{ href: "/test_ada" } Test ADA
         %a{ href: "/matrici_di_raven" } Matrici di Raven
       %section.content= yield
+      
     %script{ type: "text/javascript", src: "/js/jquery.js" }
     %script{ type: "text/javascript", src: "/js/app.js" }

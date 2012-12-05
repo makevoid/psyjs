@@ -1,4 +1,5 @@
 path = File.expand_path '../../', __FILE__
+PATH = path
 APP = "psyjs"
 
 require "bundler/setup"
@@ -17,3 +18,5 @@ user = "pairing:pa1r1ng@"
 DataMapper.setup :default, "mysql://#{user}localhost/psyjs_#{env}"
 require_all "#{path}/models"
 DataMapper.finalize
+
+Raven.generate
