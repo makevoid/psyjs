@@ -29,7 +29,7 @@ class Raven
 
       cases = cases_files.size
       answers = answers_files.size
-      right = answers_files.index right_file.first
+      right = answers_files.sort.index(right_file.first)
 
       test = { number: idx+1, answers: answers, cases: cases, right: right }
 
