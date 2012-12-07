@@ -1,0 +1,30 @@
+- stagioni = ["Primavera", "Estate", "Autunno", "Inverno"]
+
+%form{ action: "/test_mmse", method: "post"  }
+
+  %label In che anno siamo?
+  %select{ name: "year" }
+    - 1950.upto(2050).each do |year|
+      %option= year
+
+  %label In che stagione siamo?
+  %select{ name: "season" }
+    - for stagione in stagioni
+      %option= stagione
+
+  %label In che mese siamo?
+  %select{ name: "month" }
+    - for mese in Date::MONTHS_ITA
+      %option= mese
+
+  %label Seleziona la data di oggi
+  %select{ name: "day" }
+    - 1.upto(31).each do |day|
+      %option= day
+
+  %label Che giorno della settimana è oggi
+  %select{ name: "wday" }
+    - for wday in Date::WDAYS_ITA
+      %option= wday
+
+  %input{ type: "submit" }

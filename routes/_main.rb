@@ -8,6 +8,10 @@ class Psyjs < Sinatra::Base
     haml :test_ada
   end
 
+  get '/test_mmse' do
+    haml :test_mmse
+  end
+
   get "/matrici_di_raven" do
     haml :matrici_di_raven
   end
@@ -20,6 +24,10 @@ class Psyjs < Sinatra::Base
 
   post "/matrici_di_raven" do
     haml :matrici_di_raven_success
+  end
+
+  post '/test_mmse' do
+    haml :test_mmse_success
   end
 
 end

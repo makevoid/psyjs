@@ -1,0 +1,31 @@
+- num_domande = params.keys.size
+- year = params["year"]
+
+
+
+%br
+
+Anno?
+= year == Time.now.year.to_s
+%br
+
+Stagione?
+= params["season"] == Date.today.season
+%br
+
+Mese?
+= params["month"] == Date::MONTHS_ITA[Date.today.month-1]
+%br
+
+Giorno?
+= params["day"] == Date.today.day.to_s
+%br
+
+
+Giorno della sett?
+= params["wday"] == Date::WDAYS_ITA[Date.today.wday]
+%br
+
+
+
+Risultato: x / #{num_domande}
