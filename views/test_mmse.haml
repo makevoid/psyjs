@@ -17,12 +17,12 @@
     - for mese in Date::MONTHS_ITA
       %option= mese
 
-  %label Seleziona la data di oggi
+  %label Seleziona la data di oggi?
   %select{ name: "day" }
     - 1.upto(31).each do |day|
       %option= day
 
-  %label Che giorno della settimana è oggi
+  %label Che giorno della settimana è oggi?
   %select{ name: "wday" }
     - for wday in Date::WDAYS_ITA
       %option= wday
