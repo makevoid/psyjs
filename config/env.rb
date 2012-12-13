@@ -15,7 +15,9 @@ include Utils
 
 env = ENV["RACK_ENV"] || "development"
 user = "pairing:pa1r1ng@"
-DataMapper.setup :default, "mysql://#{user}localhost/psyjs_#{env}"
+db = "mysql://#{user}localhost/psyjs_#{env}"
+db = "sqlite://psyjs.db"
+DataMapper.setup :default, db
 require_all "#{path}/models"
 DataMapper.finalize
 
