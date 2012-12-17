@@ -5,6 +5,7 @@ gem "json"
 
 gem "dm-core"
 #gem "dm-mysql-adapter"
+gem "do_sqlite3"
 gem "dm-sqlite-adapter"
 gem "dm-migrations"
 
